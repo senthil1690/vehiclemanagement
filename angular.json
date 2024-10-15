@@ -72,10 +72,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "vehiclemanagement:build:production"
+              "buildTarget": "vehiclemanagement:build:production"
             },
             "development": {
-              "browserTarget": "vehiclemanagement:build:development"
+              "buildTarget": "vehiclemanagement:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -83,7 +83,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "vehiclemanagement:build"
+            "buildTarget": "vehiclemanagement:build"
           }
         },
         "test": {
