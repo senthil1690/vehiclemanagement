@@ -7,6 +7,7 @@ import { ViewvehicleComponent } from './viewvehicle/viewvehicle.component';
 import { FormComponent } from './viewvehicle/form/form.component';
 import { NgSelectModule } from '@ng-select/ng-select';
 import { FormsModule } from '@angular/forms';
+import { TableModule } from 'primeng/table';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,7 @@ import { FormsModule } from '@angular/forms';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule, NgSelectModule, FormsModule
+    AppRoutingModule, NgSelectModule, FormsModule, TableModule
   ],
   providers: [],
   bootstrap: [AppComponent]
