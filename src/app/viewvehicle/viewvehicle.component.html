@@ -44,12 +44,31 @@
                     <th *ngFor="let col of columns">
                         {{col.header}}
                     </th>
+                    <th>
+                        Actions
+                    </th>
                 </tr>
             </ng-template>
-            <ng-template pTemplate="body" let-rowData let-columns="columns">
+            <ng-template pTemplate="body" let-rowData let-columns="columns" let-ri="rowIndex">
                 <tr (dblclick)="onEdit()">
                     <td *ngFor="let col of columns">
                         {{rowData[col.field]}}
+                    </td>
+                    <td>
+                        <div class="d-flex align-items-center">
+                            <button id="delete" class="btn btn-danger" (click)="onDelete(ri)">
+                                Delete
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </ng-template>
+            <ng-template pTemplate="emptymessage" let-columns="columns">
+                <tr class="emptymessage">
+                    <td colspan="6">
+                        <div class="alert alert-warning p-2">
+                            No records found
+                        </div>
                     </td>
                 </tr>
             </ng-template>

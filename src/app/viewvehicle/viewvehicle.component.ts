@@ -20,7 +20,15 @@ export class ViewvehicleComponent implements OnInit {
   ];
 
   data = [{
-    "ownerName": "asdasd", "VehicleName": "Bajaj", "model": "1988", "vin": "78979", "insuranceprovider": "UIC", "policynumber": "7894567893", "startDate": "12-05-2022",
+    "ownerName": "own1", "VehicleName": "Bajaj", "model": "1988", "vin": "78979", "insuranceprovider": "UIC", "policynumber": "7894567893", "startDate": "12-05-2022",
+    "endDate": "15-05-1990"
+  },
+  {
+    "ownerName": "own2", "VehicleName": "Bajaj", "model": "1988", "vin": "78979", "insuranceprovider": "UIC", "policynumber": "7894567893", "startDate": "12-05-2022",
+    "endDate": "15-05-1990"
+  },
+  {
+    "ownerName": "own2", "VehicleName": "Bajaj", "model": "1988", "vin": "78979", "insuranceprovider": "UIC", "policynumber": "7894567893", "startDate": "12-05-2022",
     "endDate": "15-05-1990"
   }];
   showForm = false;
@@ -43,6 +51,9 @@ export class ViewvehicleComponent implements OnInit {
   onBack() {
     this.showForm = false;
 
+  }
+  onDelete(i: any) {
+    this.data.splice(i, 1);
   }
 
 }
